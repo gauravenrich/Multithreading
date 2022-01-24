@@ -1,4 +1,4 @@
-package com.gaurav.ordering;
+package com.gaurav.order.counter;
 
 class OrderPrinting{
     int count;
