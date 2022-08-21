@@ -55,11 +55,11 @@ class OddEvenThread extends Thread{
     }
 }
 public class OddEvenDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         OddEven oddEven=new OddEven(50);
         OddEvenThread t1=new OddEvenThread("Odd",oddEven);
         OddEvenThread t2=new OddEvenThread("Even",oddEven);
         t2.start();
-        t1.start();
+        t1.join();
     }
 }

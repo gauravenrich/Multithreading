@@ -2,7 +2,7 @@ package com.gaurav.order.counter;
 
 class OrderPrinting{
     int count;
-    public OrderPrinting(){
+    public OrderPrinting(int n){
         count=1;
     }
     public void printFirst() throws InterruptedException{
@@ -69,7 +69,8 @@ class OrderPrintingThread extends Thread {
 
 public class OrderedPrintingDemo {
     public static void main(String[] args) {
-        OrderPrinting obj = new OrderPrinting();
+        int n=10;
+        OrderPrinting obj = new OrderPrinting(n);
         OrderPrintingThread t1=new OrderPrintingThread(obj,"First");
         OrderPrintingThread t2=new OrderPrintingThread(obj,"Second");
         OrderPrintingThread t3=new OrderPrintingThread(obj,"Third");
